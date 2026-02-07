@@ -39,12 +39,12 @@ nav {
 nav ul {
     list-style: none;        /* Removes bullet points */
     display: flex !important;           /* Makes items sit side by side */
-    justify-content: flex-start !important; /* Aligns menu items to the left */
+    justify-content: flex-end !important; /* Aligns menu items to the right */
     gap: 2rem;              /* Space between each menu item */
-    padding-left: 2rem;     /* Space from left edge */
-    padding-right: 0;       /* No right padding */
+    padding-right: 10rem;    /* Space from right edge */
+    padding-left: 0;        /* No left padding */
     margin: 0;              /* Removes default margin */
-    text-align: left;       /* Text alignment left */
+    text-align: right;      /* Text alignment right */
 }
 
 /* NAVIGATION LINKS - Styling for the menu links */
@@ -70,16 +70,100 @@ main {
 }
 
 /* PAGE SECTIONS - Styling for all main page sections */
-.hero, .about, .contact, .skills {
+.hero {
     text-align: center;  /* Centers all text */
     padding: 3rem;       /* Space inside each section */
-    margin: 3rem auto;       /* Space between sections */
+    margin: 2rem;       /* Space between sections */
+}
+
+.contact{
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.contact a {
+    color: rgb(142, 140, 140);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #9c9a9a;
+}
+
+.copy-btn{
+    font-size: 2rem;
+    background: none;
+}
+
+.skills{
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem;
+}
+
+/* Skill item container */
+.skill-item {
+    display: inline-block;
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.skill-item i {
+    font-size: 6rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.skill-item img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto 0.5rem;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.about{
+    text-align: center;  /* Centers all text */
+    padding: 3rem;       /* Space inside each section */
+    margin: 2rem;       /* Space between sections */
+    margin-bottom: 5rem;
+}
+
+/* ABOUT SECTION - Side by side layout for image and text */
+.about-content {
+    display: flex;           /* Makes items sit side by side */
+    flex-direction: row-reverse;     /* Image on right, text on left */
+    align-items: center;     /* Vertically centers items */
+    gap: 3rem;              /* Space between image and text */
+    text-align: left;       /* Aligns text to the left */
+    justify-content: flex-start; /* Aligns content to the left */
+}
+
+/* ABOUT IMAGE - Profile picture styling */
+.about-img {
+    width: 300px;           /* Image width */
+    height: 300px;          /* Image height */
+    border-radius: 15px;    /* Rounded corners for square box */
+    object-fit: cover;      /* Crops image to fit without stretching */
+    flex-shrink: 0;         /* Prevents image from shrinking */
+    border: 2px solid #333; /* Border around image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Shadow around image */
+}
+
+/* ABOUT TEXT - Text content wrapper */
+.about-text {
+    flex: 1;                /* Takes remaining space */
 }
 
 .projects{
     text-align: center;
     padding: 3rem;           /* More padding inside */
-    margin: 3rem auto;       /* Space between sections */
+    margin: 0.5rem auto 3rem;       /* Space between sections */
     background: #ffffff;     /* White background for the bubble */
     border-radius: 20px;     /* Rounded corners for bubble effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
@@ -88,16 +172,38 @@ main {
 
 /* MAIN HEADINGS - Large titles on each page */
 h1 {
+    margin: 0.5rem auto;  /* Auto margins center the block */
+    font-size: 1.3rem;
+    text-align: center;
+    background: #e1e1e1;
+    padding: 0rem 1rem;
+    border-radius: 100px;
+    display: block;
+    width: fit-content;
+}
+
+h2 {
     margin-bottom: 1rem;  /* Space below the heading */
     font-size: 2rem;    /* Large text size */
+}
+
+h4 {
+    margin: 0.5rem auto;  /* Auto margins center the block */
+    font-size: 1.3rem;
+    text-align: center;
+    background: #e1e1e1;
+    padding: 0rem 1rem;
+    border-radius: 100px;
+    display: block;
+    width: fit-content;
+    margin-bottom: 2rem;
 }
 
 /* PROJECT GRID - Creates a responsive grid layout for project cards */
 .project-grid {
     display: grid;  /* Uses CSS Grid layout */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Auto-adjusts columns, min 300px wide */
-    gap: 2rem;      /* Space between project cards */
-    margin-top: 2rem;  /* Space above the grid */
+    gap: 1.5rem;      /* Space between project cards */
 }
 
 /* PROJECT CARD - Individual box for each project */
@@ -107,32 +213,11 @@ h1 {
     border-radius: 8px;      /* Rounded corners */
 }
 
-/* CONTACT FORM - Container for the contact form */
-form {
-    max-width: 500px;       /* Limits form width */
-    margin: 2rem auto;      /* Centers form and adds space above/below */
-    display: flex;          /* Uses flexbox layout */
-    flex-direction: column; /* Stacks form fields vertically */
-    gap: 1rem;             /* Space between form fields */
-}
-
-/* FORM INPUTS - Styling for text inputs and textarea */
-input, textarea {
-    padding: 0.8rem;        /* Space inside the input fields */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 4px;     /* Slightly rounded corners */
-}
-
-/* TEXTAREA - Makes the message box taller */
-textarea {
-    min-height: 150px;  /* Minimum height for message box */
-}
 
 /* SUBMIT BUTTON - Styling for the form submit button */
 button {
     padding: 0.8rem;        /* Space inside the button */
-    background: #333;       /* Dark gray background */
-    color: white;           /* White text */
+    color: rgb(142, 140, 140);           /* White text */
     border: none;           /* Removes default border */
     border-radius: 4px;     /* Rounded corners */
     cursor: pointer;        /* Shows hand cursor on hover */
@@ -140,7 +225,7 @@ button {
 
 /* BUTTON HOVER - Changes button color when hovering */
 button:hover {
-    background: #555;  /* Lighter gray when hovering */
+    color:#9c9a9a;
 }
 
 /* FOOTER - Bottom section of the page */

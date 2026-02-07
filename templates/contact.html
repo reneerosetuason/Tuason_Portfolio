@@ -1,9 +1,27 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <section id="contact" class="contact">
-    <h1>Contact Me</h1>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+    <h1>Contact</h1>
+    
+    <p>
+        <i class="fas fa-envelope"></i>
+        reneerosetuason@gmail.com<button onclick="copyEmail()" class="copy-btn">
+            <i class="fas fa-copy"></i>
+        </button>
+    </p>
+    
+    <p>
+        Resume in GDrive Link
+        <a href="https://drive.google.com/file/d/14kICOThf-Ye7JEmWjesltgbXqij4dimx/view?usp=sharing" target="_blank">
+            <i class="fas fa-file-pdf"></i>
+        </a>
+    </p>
+    
+    </section>
+
+<script>
+function copyEmail() {
+    navigator.clipboard.writeText('reneerosetuason@gmail.com');
+    alert('Email copied to clipboard!');
+}
+</script>
