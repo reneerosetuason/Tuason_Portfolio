@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESET - Removes default browser spacing and sets consistent box sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - Sets the default font, line spacing, and text color for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    padding-top: 60px;
+}
+
+/* NAVIGATION BAR - Dark background bar at the top of the page */
+nav {
+    background: #ffffff;  /* Dark gray background */
+    padding: 1rem;     /* Space inside the nav bar */
+    position: fixed;
+    top: 0;
+    width: 100;
+    z-index: 1000;
+}
+
+/* NAVIGATION MENU - Horizontal list of links */
+nav ul {
+    list-style: none;        /* Removes bullet points */
+    display: flex;           /* Makes items sit side by side */
+    justify-content: center; /* Centers the menu items */
+    gap: 2rem;              /* Space between each menu item */
+}
+
+/* NAVIGATION LINKS - Styling for the menu links */
+nav a {
+    color: rgb(0, 0, 0);           /* White text */
+    text-decoration: none;  /* Removes underline */
+}
+
+/* NAVIGATION LINKS HOVER - Changes color when you hover over a link */
+nav a:hover {
+    color: #ddd;  /* Light gray when hovering */
+}
+
+/* MAIN CONTENT AREA - The container for all page content */
+main {
+    min-height: 80vh;    /* Takes up at least 80% of screen height */
+    padding: 2rem;       /* Space inside the main area */
+    max-width: 1200px;   /* Maximum width so content doesn't stretch too wide */
+    margin: 0 auto;      /* Centers the content horizontally */
+}
+
+/* PAGE SECTIONS - Styling for all main page sections */
+.hero, .about, .projects, .contact {
+    text-align: center;  /* Centers all text */
+    padding: 2rem;       /* Space inside each section */
+}
+
+/* MAIN HEADINGS - Large titles on each page */
+h1 {
+    margin-bottom: 1rem;  /* Space below the heading */
+    font-size: 2.5rem;    /* Large text size */
+}
+
+/* PROJECT GRID - Creates a responsive grid layout for project cards */
+.project-grid {
+    display: grid;  /* Uses CSS Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Auto-adjusts columns, min 300px wide */
+    gap: 2rem;      /* Space between project cards */
+    margin-top: 2rem;  /* Space above the grid */
+}
+
+/* PROJECT CARD - Individual box for each project */
+.project-card {
+    border: 1px solid #ddd;  /* Light gray border */
+    padding: 1.5rem;         /* Space inside the card */
+    border-radius: 8px;      /* Rounded corners */
+}
+
+/* CONTACT FORM - Container for the contact form */
+form {
+    max-width: 500px;       /* Limits form width */
+    margin: 2rem auto;      /* Centers form and adds space above/below */
+    display: flex;          /* Uses flexbox layout */
+    flex-direction: column; /* Stacks form fields vertically */
+    gap: 1rem;             /* Space between form fields */
+}
+
+/* FORM INPUTS - Styling for text inputs and textarea */
+input, textarea {
+    padding: 0.8rem;        /* Space inside the input fields */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px;     /* Slightly rounded corners */
+}
+
+/* TEXTAREA - Makes the message box taller */
+textarea {
+    min-height: 150px;  /* Minimum height for message box */
+}
+
+/* SUBMIT BUTTON - Styling for the form submit button */
+button {
+    padding: 0.8rem;        /* Space inside the button */
+    background: #333;       /* Dark gray background */
+    color: white;           /* White text */
+    border: none;           /* Removes default border */
+    border-radius: 4px;     /* Rounded corners */
+    cursor: pointer;        /* Shows hand cursor on hover */
+}
+
+/* BUTTON HOVER - Changes button color when hovering */
+button:hover {
+    background: #555;  /* Lighter gray when hovering */
+}
+
+/* FOOTER - Bottom section of the page */
+footer {
+    background: #ffffff;       /* Dark gray background */
+    color: rgb(0, 0, 0);           /* White text */
+    text-align: center;     /* Centers the text */
+    padding: 1rem;          /* Space inside the footer */
+}
