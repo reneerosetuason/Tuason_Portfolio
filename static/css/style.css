@@ -12,33 +12,48 @@ html {
 /* BODY - Sets the default font, line spacing, and text color for the entire page */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 2;
     color: #000000;
-    padding-top: 60px;
+    padding-top: 80px;
+    background: #f5f5f5;     /* Light gray background */
 }
 
 /* NAVIGATION BAR - Dark background bar at the top of the page */
 nav {
-    background: #ffffff;  /* Dark gray background */
-    padding: 1rem;     /* Space inside the nav bar */
-    position: fixed;
-    top: 0;
-    width: 100;
-    z-index: 1000;
+    background: #ffffff;  /* White background */
+    padding: 1.5rem 0;     /* Only top and bottom padding */
+    position: fixed;     /* Stays at top when scrolling */
+    top: 0;             /* Sticks to top */
+    left: 0;            /* Aligns to left edge */
+    width: 100%;        /* Full width */
+    z-index: 1000;      /* Stays above other content */
+}
+
+/* NAVIGATION CONTAINER - Wrapper for nav content */
+.nav-container {
+    width: 100%;        /* Full width */
+    text-align: left;   /* Aligns content to left */
 }
 
 /* NAVIGATION MENU - Horizontal list of links */
 nav ul {
     list-style: none;        /* Removes bullet points */
-    display: flex;           /* Makes items sit side by side */
-    justify-content: center; /* Centers the menu items */
+    display: flex !important;           /* Makes items sit side by side */
+    justify-content: flex-start !important; /* Aligns menu items to the left */
     gap: 2rem;              /* Space between each menu item */
+    padding-left: 2rem;     /* Space from left edge */
+    padding-right: 0;       /* No right padding */
+    margin: 0;              /* Removes default margin */
+    text-align: left;       /* Text alignment left */
 }
 
 /* NAVIGATION LINKS - Styling for the menu links */
 nav a {
     color: rgb(0, 0, 0);           /* White text */
     text-decoration: none;  /* Removes underline */
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
 }
 
 /* NAVIGATION LINKS HOVER - Changes color when you hover over a link */
@@ -55,15 +70,26 @@ main {
 }
 
 /* PAGE SECTIONS - Styling for all main page sections */
-.hero, .about, .projects, .contact {
+.hero, .about, .contact, .skills {
     text-align: center;  /* Centers all text */
-    padding: 2rem;       /* Space inside each section */
+    padding: 3rem;       /* Space inside each section */
+    margin: 3rem auto;       /* Space between sections */
+}
+
+.projects{
+    text-align: center;
+    padding: 3rem;           /* More padding inside */
+    margin: 3rem auto;       /* Space between sections */
+    background: #ffffff;     /* White background for the bubble */
+    border-radius: 20px;     /* Rounded corners for bubble effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+    max-width: 1000px;       /* Limits width of each bubble */
 }
 
 /* MAIN HEADINGS - Large titles on each page */
 h1 {
     margin-bottom: 1rem;  /* Space below the heading */
-    font-size: 2.5rem;    /* Large text size */
+    font-size: 2rem;    /* Large text size */
 }
 
 /* PROJECT GRID - Creates a responsive grid layout for project cards */
