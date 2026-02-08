@@ -160,14 +160,43 @@ main {
     flex: 1;                /* Takes remaining space */
 }
 
+
+/* GitHub icon in about section */
+.about-text a {
+    color: #333;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    color: #555;
+}
+
 .projects{
-    text-align: center;
+    text-align: left;
     padding: 3rem;           /* More padding inside */
     margin: 0.5rem auto 3rem;       /* Space between sections */
     background: #ffffff;     /* White background for the bubble */
     border-radius: 20px;     /* Rounded corners for bubble effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
     max-width: 1000px;       /* Limits width of each bubble */
+}
+
+/* Project links styling */
+.project-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.project-links a {
+    color: #333;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    color: #007bff;
 }
 
 /* MAIN HEADINGS - Large titles on each page */
@@ -185,6 +214,10 @@ h1 {
 h2 {
     margin-bottom: 1rem;  /* Space below the heading */
     font-size: 2rem;    /* Large text size */
+}
+
+h3 {
+    font-size: 1.3rem;
 }
 
 h4 {
@@ -211,6 +244,15 @@ h4 {
     border: 1px solid #ddd;  /* Light gray border */
     padding: 1.5rem;         /* Space inside the card */
     border-radius: 8px;      /* Rounded corners */
+}
+
+/* Project image styling */
+.project-img {
+    width: 100%;             /* Full width of card */
+    height: 600x;           /* Fixed height */
+    object-fit: cover;       /* Crops image to fit */
+    border-radius: 8px;      /* Rounded corners */
+    margin-bottom: 1rem;     /* Space below image */
 }
 
 
