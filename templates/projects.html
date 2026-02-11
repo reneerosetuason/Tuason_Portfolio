@@ -15,7 +15,7 @@
                                 <a href="https://github.com/reneerosetuason/Majayjay-Scholars" target="_blank" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" onclick="openGallery('project1'); return false;" class="project-link" title="View Images">
+                                <a href="#" target="_blank" class="https://drive.google.com/drive/folders/1PzEY5v-MKsJXCT7aFe7oVzFqRXjDbXyI?usp=sharing" title="View Images">
                                     <i class="fas fa-images"></i>
                                 </a>
                             </div>
@@ -44,7 +44,7 @@
                                 <a href="https://github.com/reneerosetuason/expense_tracker" target="_blank" class="project-link" title="View Code">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" onclick="openGallery('project2'); return false;" class="project-link" title="View Images">
+                                <a href="#" target="_blank" class="https://drive.google.com/drive/folders/1xJ7OA3QsSQidA0s5356w19B-n59lgoWV?usp=sharing" title="View Images">
                                     <i class="fas fa-images"></i>
                                 </a>
                             </div>
@@ -70,7 +70,7 @@
                                 <a href="https://www.figma.com/make/dMBBS10hFar78DY4y540an/Self-Care-Reminder-App?fullscreen=1&t=4moqIatoHioIzupZ-1&preview-route=%2Fsettings" target="_blank" class="project-link" title="View Figma Design">
                                     <i class="fab fa-figma"></i>
                                 </a>
-                                <a href="#" onclick="openGallery('project3'); return false;" class="project-link" title="View Images">
+                                <a href="#" target="_blank" class="https://drive.google.com/drive/folders/1bY6GcFIWvGIALngPq1ZLy2rMjxa66yNZ?usp=sharing" title="View Images">
                                     <i class="fas fa-images"></i>
                                 </a>
                             </div>
@@ -87,69 +87,4 @@
     </div>
 </section>
 
-<!-- Image Gallery Modal -->
-<div id="galleryModal" class="gallery-modal">
-    <span class="gallery-close" onclick="closeGallery()">&times;</span>
-    <div class="gallery-content">
-        <button class="gallery-nav prev" onclick="changeImage(-1)">&#10094;</button>
-        <img id="galleryImage" src="" alt="Project Image">
-        <button class="gallery-nav next" onclick="changeImage(1)">&#10095;</button>
-    </div>
-</div>
 
-<script>
-const projectGalleries = {
-    project1: [
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho1.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho2.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho3.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho4.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho5.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho6.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho7.jpg') }}",
-        "{{ url_for('static', filename='images/MajayjayScholars/mscho8.jpg') }}"
-    ],
-    project2: [
-        "{{ url_for('static', filename='images/ExpenseTracker/spend1.jpg') }}",
-        "{{ url_for('static', filename='images/ExpenseTracker/spend2.jpg') }}",
-        "{{ url_for('static', filename='images/ExpenseTracker/spend3.jpg') }}",
-        "{{ url_for('static', filename='images/ExpenseTracker/spend4.jpg') }}",
-        "{{ url_for('static', filename='images/ExpenseTracker/spend5.jpg') }}"
-    ],
-    project3: [
-        "{{ url_for('static', filename='images/routine/rout1.jpg') }}",
-        "{{ url_for('static', filename='images/routine/rout2.jpg') }}",
-        "{{ url_for('static', filename='images/routine/rout3.jpg') }}",
-        "{{ url_for('static', filename='images/routine/rout5.jpg') }}",
-        "{{ url_for('static', filename='images/routine/rout6.jpg') }}"
-    ]
-};
-
-let currentGallery = [];
-let currentImageIndex = 0;
-
-function openGallery(projectId) {
-    currentGallery = projectGalleries[projectId];
-    currentImageIndex = 0;
-    document.getElementById('galleryImage').src = currentGallery[0];
-    document.getElementById('galleryModal').style.display = 'flex';
-}
-
-function closeGallery() {
-    document.getElementById('galleryModal').style.display = 'none';
-}
-
-function changeImage(direction) {
-    currentImageIndex += direction;
-    if (currentImageIndex < 0) currentImageIndex = currentGallery.length - 1;
-    if (currentImageIndex >= currentGallery.length) currentImageIndex = 0;
-    document.getElementById('galleryImage').src = currentGallery[currentImageIndex];
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('galleryModal');
-    if (event.target === modal) {
-        closeGallery();
-    }
-}
-</script>
