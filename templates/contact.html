@@ -3,21 +3,28 @@
 <section id="contact" class="contact">
     <h1>Contact</h1>
     
-    <p>
-        <i class="fas fa-envelope"></i>
-        reneerosetuason@gmail.com<button onclick="copyEmail()" class="copy-btn">
-            <i class="fas fa-copy"></i>
-        </button>
-    </p>
-    
-    <p>
-        Resume in GDrive Link
-        <a href="https://drive.google.com/file/d/14kICOThf-Ye7JEmWjesltgbXqij4dimx/view?usp=sharing" target="_blank">
-            <i class="fas fa-file-pdf"></i>
-        </a>
-    </p>
-    
-    </section>
+    <div class="contact-content">
+        <div class="contact-item">
+            <h3>Email</h3>
+            <button onclick="copyEmail()" class="social-btn email-btn" title="Click to copy email">
+                <i class="fas fa-envelope"></i> reneerosetuason@gmail.com
+            </button>
+        </div>
+        
+        <div class="contact-item">
+            <h3>Let's Connect</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/reneerose.tuason29" target="_blank" class="social-btn">View Facebook</a>
+                <a href="https://www.instagram.com/tsnd.ren0/" target="_blank" class="social-btn">View Instagram</a>
+            </div>
+        </div>
+        
+        <div class="contact-item">
+            <h3>Resume</h3>
+            <a href="{{ url_for('static', filename='imagees/Tuason_ReneeRose_Resume.pdf') }}" download class="social-btn">Download Resume</a>
+        </div>
+    </div>
+</section>
 
 <script>
 function copyEmail() {

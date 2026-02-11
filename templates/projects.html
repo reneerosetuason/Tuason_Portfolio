@@ -1,18 +1,155 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <h4>Projects</h4>
 <section id="projects" class="projects">
-    <div class="project-grid">
-        <div class="project-card">
-            <img src="static/images/photogrid.png" alt="MajayjayScholars"  class="project-img">
-    
-            <div class="project-links">
-                <a href="https://github.com/reneerosetuason/Majayjay-Scholars" target="_blank" title="View Code">
-                <i class="fab fa-github"></i>
-                </a>
-            </div>
-            
-            <h3>🎓MajayjayScholars</h3>
-            <p>A website and mobile application that enables student scholars from Majayjay, Laguna
-                to apply and renew their scholarship reducing the paper work.
-            </p>
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/MajayjayScholars/mscho2.jpg') }}" alt="Project 1">
+                        <div class="project-badge badge-completed">Completed</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/reneerosetuason/Majayjay-Scholars" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" onclick="openGallery('project1'); return false;" class="project-link" title="View Images">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>MajayjayScholars</h3>
+                    <p>A website and mobile application that enables student scholars to apply and renew scholarship. This reduce the paperworks and enables them to apply and renew anywhere.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                </div>
 
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/ExpenseTracker/spend5.jpg') }}" alt="Project 2">
+                        <div class="project-badge badge-progress">In Progress</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/reneerosetuason/expense_tracker" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" onclick="openGallery('project2'); return false;" class="project-link" title="View Images">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Expense Tracker</h3>
+                    <p>An Expense Tracker app helps users monitor their daily spending into clear categories and visual summaries. It promotes better money management through simple tracking, budgeting, and easy-to-read charts.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="{{ url_for('static', filename='images/routine/rout1.jpg') }}" alt="Project 3">
+                        <div class="project-badge badge-completed">Completed</div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://www.figma.com/make/dMBBS10hFar78DY4y540an/Self-Care-Reminder-App?fullscreen=1&t=4moqIatoHioIzupZ-1&preview-route=%2Fsettings" target="_blank" class="project-link" title="View Figma Design">
+                                    <i class="fab fa-figma"></i>
+                                </a>
+                                <a href="#" onclick="openGallery('project3'); return false;" class="project-link" title="View Images">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Project Title 3</h3>
+                    <p>A Self-Care Routine app gently reminds users to practice healthy daily habits like resting, hydrating, and relaxing. It focuses on creating a calm and supportive experience that encourages consistency without pressure.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- Image Gallery Modal -->
+<div id="galleryModal" class="gallery-modal">
+    <span class="gallery-close" onclick="closeGallery()">&times;</span>
+    <div class="gallery-content">
+        <button class="gallery-nav prev" onclick="changeImage(-1)">&#10094;</button>
+        <img id="galleryImage" src="" alt="Project Image">
+        <button class="gallery-nav next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+</div>
+
+<script>
+const projectGalleries = {
+    project1: [
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho1.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho2.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho3.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho4.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho5.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho6.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho7.jpg') }}",
+        "{{ url_for('static', filename='images/MajayjayScholars/mscho8.jpg') }}"
+    ],
+    project2: [
+        "{{ url_for('static', filename='images/ExpenseTracker/spend1.jpg') }}",
+        "{{ url_for('static', filename='images/ExpenseTracker/spend2.jpg') }}",
+        "{{ url_for('static', filename='images/ExpenseTracker/spend3.jpg') }}",
+        "{{ url_for('static', filename='images/ExpenseTracker/spend4.jpg') }}",
+        "{{ url_for('static', filename='images/ExpenseTracker/spend5.jpg') }}"
+    ],
+    project3: [
+        "{{ url_for('static', filename='images/routine/rout1.jpg') }}",
+        "{{ url_for('static', filename='images/routine/rout2.jpg') }}",
+        "{{ url_for('static', filename='images/routine/rout3.jpg') }}",
+        "{{ url_for('static', filename='images/routine/rout5.jpg') }}",
+        "{{ url_for('static', filename='images/routine/rout6.jpg') }}"
+    ]
+};
+
+let currentGallery = [];
+let currentImageIndex = 0;
+
+function openGallery(projectId) {
+    currentGallery = projectGalleries[projectId];
+    currentImageIndex = 0;
+    document.getElementById('galleryImage').src = currentGallery[0];
+    document.getElementById('galleryModal').style.display = 'flex';
+}
+
+function closeGallery() {
+    document.getElementById('galleryModal').style.display = 'none';
+}
+
+function changeImage(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) currentImageIndex = currentGallery.length - 1;
+    if (currentImageIndex >= currentGallery.length) currentImageIndex = 0;
+    document.getElementById('galleryImage').src = currentGallery[currentImageIndex];
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('galleryModal');
+    if (event.target === modal) {
+        closeGallery();
+    }
+}
+</script>

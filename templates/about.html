@@ -1,25 +1,47 @@
 <section id="about" class="about">
-    <div class="about-content">
-        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Renee Rose Tuason" class="about-img">
-        <div class="about-text">
-            <h2>Hi, I'm Renee Rose Tuason 👋</h2>
-            <p>I'm a Bachelor of Science in Information Technology (BSIT) student with hands-on experience in web and
-mobile application development. Skilled in building functional websites and cross-platform mobile
-applications using Flutter, with foundational knowledge in Python, basic JavaScript, and database
-management using MySQL and Supabase. Familiar with UI/UX design principles and committed to
-continuous learning, problem-solving, and applying technical skills to real-world academic and
-community-based projects.
-</p>
+    <h1>About</h1>
+    <div class="education-container">
+        <!-- Education Box 1 -->
+        <div class="education-box">
+            <img src="{{ url_for('static', filename='images/school/LNHS.jpg') }}" alt="School 1" class="education-img">
+            <h3>Lumban National High School</h3>
+            <p class="education-year">2018 - 2022</p>
+            <div class="education-description">
+                <p>Finished highschool in Lumban National High School. Graduated with honors.</p>
+            </div>
+        </div>
 
-        <a href="https://github.com/reneerosetuason" target="_blank" title="GitHub Profile">
-            <i class="fab fa-github"></i>
-        </a>
+        <!-- Education Box 2 -->
+        <div class="education-box">
+            <img src="{{ url_for('static', filename='images/school/PSBC.png') }}" alt="School 2" class="education-img">
+            <h3>Paete Science and Business College Inc. Pagsanjan</h3>
+            <p class="education-year">2022 - 2024</p>
+            <div class="education-description">
+                <p>Graduated with high honors, Best in Research(with flying colors), and Best in Capstone Paper. Finished STEM under PSBC.</p>
+            </div>
+        </div>
 
-        </a>
-        <a href="https://www.linkedin.com/in/renee-rose-tuason-095287399/" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
+        <!-- Education Box 3 -->
+        <div class="education-box">
+            <img src="{{ url_for('static', filename='images/school/LSPU.jpg') }}" alt="School 3" class="education-img">
+            <h3>Laguna State Polytechnic University—Sta. Cruz</h3>
+            <p class="education-year">2024 - Present</p>
+            <div class="education-description">
+                <p>Currently studying Bachelor of Science in Information Technology.</p>
+            </div>
+        </div>
+    </div>
 
+
+    <div class="info-container">
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Lumban, Laguna, Philippines</p>
+        </div>
+
+        <div class="course">
+            <i class="fas fa-graduation-cap"></i>
+            <p>Bachelor of Science in Information Technology</p>
         </div>
     </div>
 </section>
