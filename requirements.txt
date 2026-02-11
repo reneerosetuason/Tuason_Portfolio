@@ -1,31 +1,3 @@
 Flask==3.0.0
 
-<div class="project-card">
-    <!-- 1. Project Image/Screenshot -->
-    <img src="path/to/screenshot.jpg" alt="MajayjayScholars" class="project-img">
-    
-    <!-- 2. Project Title -->
-    <h3>MajayjayScholars</h3>
-    
-    <!-- 3. Project Description -->
-    <p>A website and mobile application that enables student scholars from Majayjay, Laguna
-       to apply and renew their scholarship reducing the paper work.</p>
-    
-    <!-- 4. Tech Stack Tags -->
-    <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">Flask</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">React</span>
-    </div>
-    
-    <!-- 5. Action Links (GitHub + Live Demo) -->
-    <div class="project-links">
-        <a href="your-github-link" target="_blank" title="View Code">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="your-live-demo-link" target="_blank" title="Live Demo">
-            <i class="fas fa-external-link-alt"></i>
-        </a>
-    </div>
-</div>
+
